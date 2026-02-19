@@ -35,7 +35,7 @@ const Hero = () => {
                 initial={{ y: 100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-                className="text-white text-6xl md:text-8xl lg:text-9xl font-display leading-[0.9] drop-shadow-2xl"
+                className="text-white text-5xl md:text-7xl lg:text-8xl font-display leading-[0.9] drop-shadow-2xl"
                 >
                 DRIVE THE <br />
                 <span className="text-lux-red relative inline-block filter drop-shadow-[0_0_15px_rgba(230,57,70,0.5)]">
