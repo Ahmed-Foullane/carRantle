@@ -26,7 +26,7 @@ function App() {
       </AnimatePresence>
 
       {!isLoading && (
-        <div className="flex flex-col min-h-screen bg-lux-black text-lux-white font-sans selection:bg-lux-red selection:text-white">
+        <div className="flex flex-col min-h-screen bg-lux-black text-lux-white font-sans selection:bg-lux-red selection:text-white max-w-[1920px] mx-auto shadow-2xl">
             <ScrollToTop />
             <Navbar />
             <main className="flex-grow relative z-10 w-full">
