@@ -29,15 +29,15 @@ const Navbar = () => {
   ];
 
   return (
-    <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-lux-black/90 backdrop-blur-md shadow-lg py-4' : 'bg-transparent py-6'
+    <nav 
+      className={`fixed top-0 w-full z-50 transition-all duration-300   ${
+        isScrolled ? 'bg-lux-black/90 backdrop-blur-md shadow-lg ' : 'bg-transparent'
       }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
         {/* Logo */}
-        <Link to="/" className="text-3xl font-display text-lux-white tracking-wider z-50">
-          LUX<span className="text-lux-red">DRIVE</span>
+        <Link to="/" className="z-50">
+          <img src="/luxDriveLogo.png" alt="LUXDRIVE" className="h-36 w-auto object-contain" />
         </Link>
 
         {/* Desktop Menu */}

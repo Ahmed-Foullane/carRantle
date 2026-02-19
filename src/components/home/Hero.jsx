@@ -17,8 +17,8 @@ const Hero = () => {
       {/* Parallax Background Image */}
       <motion.div style={{ y, opacity }} className="absolute inset-0 w-full h-full">
         <img
-          src="https://images.unsplash.com/photo-1617788138017-80ad40651399?q=80&w=2070&auto=format&fit=crop"
-          alt="Tesla Model S Plaid"
+          src="/images/cars/RangeRoverSport-min.webp"
+          alt="Range Rover Sport"
           className="w-full h-full object-cover object-center"
         />
         {/* Gradient Overlay with more depth */}

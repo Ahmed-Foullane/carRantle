@@ -62,7 +62,7 @@ const Voitures = () => {
 
       <div className="flex flex-col md:flex-row gap-12">
         {/* Sidebar */}
-        <div className="w-full md:w-1/4">
+        <div className="w-full md:w-1/4 md:sticky md:top-24 md:self-start md:h-fit">
           <CarFilters 
             filters={filters} 
             setFilters={setFilters} 
