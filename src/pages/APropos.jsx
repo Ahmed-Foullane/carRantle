@@ -54,24 +54,42 @@ const APropos = () => {
         <div className="container mx-auto px-6 relative z-10">
             <h2 className="text-4xl font-display text-white text-center mb-16">Notre Histoire</h2>
             
-            <div className="relative border-l-2 border-white/10 ml-6 md:mx-auto md:max-w-2xl space-y-12 pl-8 md:pl-0">
-                {[
-                    { year: '2015', title: 'La Création', desc: 'Lancement de LUXDRIVE à Paris avec 5 véhicules.' },
-                    { year: '2018', title: 'Expansion', desc: 'Ouverture des agences à Nice et Monaco.' },
-                    { year: '2020', title: 'Digitalisation', desc: 'Lancement de notre plateforme de réservation 100% en ligne.' },
-                    { year: '2024', title: 'Leader', desc: 'Désigné "Meilleur loueur de luxe" par AutoMoto Mag.' }
-                ].map((item, idx) => (
-                    <div key={idx} className="relative md:flex items-center justify-between group">
-                        {/* Dot */}
-                        <div className="absolute top-0 left-[-39px] md:left-1/2 md:-translate-x-1/2 w-5 h-5 bg-lux-black border-4 border-lux-red rounded-full z-20"></div>
-                        
-                        <div className={`md:w-5/12 ${idx % 2 === 0 ? 'md:mr-auto md:text-right' : 'md:ml-auto'}`}>
-                            <span className="text-lux-red font-bold text-xl block mb-1">{item.year}</span>
-                            <h3 className="text-white text-2xl font-bold mb-2">{item.title}</h3>
-                            <p className="text-gray-400">{item.desc}</p>
-                        </div>
-                    </div>
-                ))}
+            <div className="relative max-w-4xl mx-auto">
+                {/* Central Line */}
+                <motion.div 
+                    initial={{ height: 0 }}
+                    whileInView={{ height: '100%' }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1.5, ease: "easeInOut" }}
+                    className="absolute left-4 md:left-1/2 top-0 w-0.5 bg-white/10 md:-translate-x-1/2"
+                ></motion.div>
+
+                <div className="space-y-12">
+                    {[
+                        { year: '2015', title: 'La Création', desc: 'Lancement de LUXDRIVE à Paris avec 5 véhicules.' },
+                        { year: '2018', title: 'Expansion', desc: 'Ouverture des agences à Nice et Monaco.' },
+                        { year: '2020', title: 'Digitalisation', desc: 'Lancement de notre plateforme de réservation 100% en ligne.' },
+                        { year: '2024', title: 'Leader', desc: 'Désigné "Meilleur loueur de luxe" par AutoMoto Mag.' }
+                    ].map((item, idx) => (
+                        <motion.div 
+                            key={idx} 
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: "-100px" }}
+                            transition={{ duration: 0.6, delay: idx * 0.2 }}
+                            className="relative flex flex-col md:flex-row items-center justify-between group"
+                        >
+                            {/* Dot */}
+                            <div className="absolute top-0 left-[calc(1rem-9px)] md:left-1/2 md:-translate-x-1/2 w-5 h-5 bg-lux-black border-4 border-lux-red rounded-full z-20"></div>
+                            
+                            <div className={`w-full md:w-[45%] pl-12 md:pl-0 ${idx % 2 === 0 ? 'md:text-right md:mr-auto' : 'md:ml-auto'}`}>
+                                <span className="text-lux-red font-bold text-xl block mb-1">{item.year}</span>
+                                <h3 className="text-white text-2xl font-bold mb-2">{item.title}</h3>
+                                <p className="text-gray-400">{item.desc}</p>
+                            </div>
+                        </motion.div>
+                    ))}
+                </div>
             </div>
         </div>
       </div>
